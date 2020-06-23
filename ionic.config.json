@@ -1,5 +1,7 @@
 {
   "name": "token-siga",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

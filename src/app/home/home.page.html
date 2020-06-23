@@ -1,20 +1,23 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Blank
+      Inicio
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card >
+    <img src="../../../assets/img/logo_aplicacion.png" />
+    <ion-card-header>
+      <ion-card-subtitle >Bienvenido</ion-card-subtitle>
+      <ion-card-title *ngIf="datoRecibido" color="secondary">{{response.beanUsuario.nombre}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <!-- fab placed to the top end -->
+   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="irQR()">
+      <ion-icon name="qr-code-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

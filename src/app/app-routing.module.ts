@@ -7,10 +7,17 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
+    path: 'lector-qr',
+    loadChildren: () => import('./lector-qr/lector-qr.module').then( m => m.LectorQrPageModule)
+  },
+
+
+  {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'lector-qr',
     pathMatch: 'full'
   },
+  
 ];
 
 @NgModule({
